@@ -1,6 +1,12 @@
+-- // Credits to IYAdmin for cloneref
 local cloneref = cloneref or function(o) return o end
 COREGUI = cloneref(game:GetService("CoreGui"))
+Players = cloneref(game:GetService("Players"))
 UIS = cloneref(game:GetService("UserInputService"))
+
+if identifyexecutor() ~= "Celery" then
+Players.LocalPlayer:Kick("stop using others executor or you cant use this script")
+end
 
 if COREGUI:FindFirstChild("Internal") then
 	COREGUI.Internal:Destroy()
