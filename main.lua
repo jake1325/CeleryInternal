@@ -290,8 +290,14 @@ draggable(ScriptHub)
 
 -- toggle
 UIS.InputBegan:Connect(function(input)
-	if input.KeyCode == Enum.KeyCode.Insert then
+    if getgenv().KeyToOpen then
+	if input.KeyCode == Enum.KeyCode[getgenv().KeyToOpen] then
 		Background.Visible = not Background.Visible
+	end
+	else
+	    if input.KeyCode == Enum.KeyCode.Insert then
+		Background.Visible = not Background.Visible
+	   end
 	end
 end)
 
