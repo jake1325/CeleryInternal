@@ -13,8 +13,9 @@ if COREGUI:FindFirstChild("Internal") then
 end
 
 -- // Credits to vxsty for Notification
+local keycode = tostring(getgenv().KeyToOpen):match("%.(%w+)$")
 local Notif = loadstring(game:HttpGet("https://raw.githubusercontent.com/KrypDeveloper/Quasar/main/Quasar%20Utilities/Quasar%20UI/Notif/notif.lua"))()
-Notif:CreateNotification({Title = 'Internal', Content = 'Press Insert to Open', Length = 5, Buttons = {
+Notif:CreateNotification({Title = 'Internal', Content = 'Press '..keycode.." to Open", Length = 5, Buttons = {
 	[1] = {
 		Title = 'Dismiss',
 		ClosesUI = true,
