@@ -5,7 +5,7 @@ Players = cloneref(game:GetService("Players"))
 UIS = cloneref(game:GetService("UserInputService"))
 
 if identifyexecutor() ~= "Celery" then
-Players.LocalPlayer:Kick("stop using others executor or you cant use this script")
+Players.LocalPlayer:Kick("Stop using other executor or you cant use this script.")
 end
 
 if COREGUI:FindFirstChild("Internal") then
@@ -13,6 +13,7 @@ if COREGUI:FindFirstChild("Internal") then
 end
 
 -- // Credits to vxsty for Notification
+-- // Hi, FreeScripts here! The notification system that made by vxsty is deleted in github. You can change it to other notification system or just remove it.
 local keycode = tostring(getgenv().KeyToOpen):match("%.(%w+)$")
 local Notif = loadstring(game:HttpGet("https://raw.githubusercontent.com/KrypDeveloper/Quasar/main/Quasar%20Utilities/Quasar%20UI/Notif/notif.lua"))()
 Notif:CreateNotification({Title = 'Internal', Content = 'Press '..keycode.." to Open", Length = 5, Buttons = {
